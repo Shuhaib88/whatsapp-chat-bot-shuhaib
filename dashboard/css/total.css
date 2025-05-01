@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Vertical Navbar */
+.navbar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    height: 100vh;
+    padding: 20px 0;
+    position: fixed;
+}
+
+.navbar-header {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #34495e;
+    margin-bottom: 20px;
+}
+
+.navbar-header h2 {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-links li:hover {
+    background-color: #34495e;
+}
+
+.nav-links li.active {
+    background-color: #3498db;
+}
+
+.nav-links li i {
+    margin-right: 10px;
+}
+
+/* Table Styles */
+
+.main-content {
+    margin-left: 250px;
+    margin-right: 30px;
+}
+
+.table-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    margin-top: 10px;
+    margin-left: 90px;
+    margin-right: 20px;
+    width: calc(130% - 20px);
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.booking-table th,
+.booking-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.booking-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.booking-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.status-select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.reply-textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    min-height: 60px;
+    resize: vertical;
+}
+
+.update-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.update-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .booking-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

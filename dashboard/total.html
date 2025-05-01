@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Total Bookings</title>
+        <link rel="stylesheet" href="css/total.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Vertical Navbar -->
+        <nav class="navbar">
+            <div class="navbar-header">
+                <h2><i class="fas fa-hotel"></i> Booking System</h2>
+            </div>
+            <ul class="nav-links">
+                <li onclick="window.location.href='dashboard.html'; setActive(this)">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </li>
+                <li onclick="window.location.href='admin.html'; setActive(this)">
+                    <i class="fas fa-user-cog"></i> Admin Panel
+                </li>
+                <li onclick="window.location.href='pending.html'; setActive(this)">
+                    <i class="fas fa-clock"></i> Pending Bookings
+                </li>
+                <li onclick="window.location.href='confirmed.html'; setActive(this)">
+                    <i class="fas fa-check-circle"></i> Confirmed Bookings
+                </li>
+                <li onclick="window.location.href='total.html'; setActive(this)">
+                    <i class="fas fa-list-alt"></i> Total Bookings
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="dashboard-header">
+                <h1><i class="fas fa-clock"></i> Total Bookings</h1>
+            </div>
+
+            <!-- Pending Bookings Table -->
+            <div class="table-container">
+                <table class="booking-table">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>Name</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Reply</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sample data rows - in a real app, this would come from a database -->
+                        <tr>
+
+                        </tr>
+                        <!-- More rows would be added dynamically in a real app -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="js/common.js"></script>
+    </body>
+</html>

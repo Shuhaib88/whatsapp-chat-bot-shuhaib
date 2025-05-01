@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+    </head>
+    <body>
+        <!-- Vertical Navbar -->
+        <nav class="navbar">
+            <div class="navbar-header">
+                <h2><i class="fas fa-hotel"></i> Booking System</h2>
+            </div>
+            <ul class="nav-links">
+                <li data-page="dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </li>
+                <li data-page="admin.html">
+                    <i class="fas fa-user-cog"></i> Admin Panel
+                </li>
+                <li data-page="pending.html">
+                    <i class="fas fa-clock"></i> Pending Bookings
+                </li>
+                <li data-page="confirmed.html">
+                    <i class="fas fa-check-circle"></i> Confirmed Bookings
+                </li>
+                <li data-page="total.html">
+                    <i class="fas fa-list-alt"></i> Total Bookings
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="dashboard-header">
+                <h1><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+            </div>
+
+            <!-- Cards Section -->
+            <div class="cards">
+                <a href="pending.html" class="card-link">
+                    <div class="card pending">
+                        <h3>Pending Bookings</h3>
+                        <div class="value" id="pending-value">24</div>
+                        <p>Awaiting confirmation</p>
+                    </div>
+                </a>
+                <a href="confirmed.html" class="card-link">
+                    <div class="card confirmed">
+                        <h3>Confirmed Bookings</h3>
+                        <div class="value" id="confirmed-value">156</div>
+                        <p>Confirmed reservations</p>
+                    </div>
+                </a>
+                <a href="total.html" class="card-link">
+                    <div class="card total">
+                        <h3>Total Bookings</h3>
+                        <div class="value" id="total-value">180</div>
+                        <p>All bookings</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Additional content -->
+            <div class="content-section">
+                <h2>Recent Activity</h2>
+                <p>
+                    Dashboard content will go here. You can add tables, charts,
+                    or other elements as needed.
+                </p>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

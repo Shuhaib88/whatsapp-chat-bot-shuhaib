@@ -1,0 +1,44 @@
+{
+  "bookings": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "date": "2023-11-15",
+      "time": "14:30",
+      "status": "confirmed",
+      "reply": "Your booking is confirmed"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "date": "2023-11-16",
+      "time": "10:00",
+      "status": "confirmed",
+      "reply": "Please confirm your booking"
+    },
+    {
+      "id": 3,
+      "name": "Robert Johnson",
+      "date": "2023-11-17",
+      "time": "16:45",
+      "status": "postponed",
+      "reply": "Rescheduled for next week"
+    },
+    {
+      "id": 4,
+      "name": "Emily Davis",
+      "date": "2023-11-18",
+      "time": "09:15",
+      "status": "cancel",
+      "reply": "Customer requested cancellation"
+    },
+    {
+      "id": 5,
+      "name": "Michael Brown",
+      "date": "2023-11-20",
+      "time": "11:30",
+      "status": "pending",
+      "reply": ""
+    }
+  ]
+}
