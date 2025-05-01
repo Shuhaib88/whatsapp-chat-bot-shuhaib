@@ -5,8 +5,8 @@
       "name": "John Doe",
       "date": "2023-11-15",
       "time": "14:30",
-      "status": "postponed",
-      "reply": "Your booking is postponed"
+      "status": "pending",
+      "reply": "Confirmed by shuhaib"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "date": "2023-11-16",
       "time": "10:00",
       "status": "confirmed",
-      "reply": "Please confirm your booking"
+      "reply": "Confirmed by admin"
     },
     {
       "id": 3,
@@ -30,15 +30,15 @@
       "date": "2023-11-18",
       "time": "09:15",
       "status": "cancel",
-      "reply": "Customer requested cancellation"
+      "reply": "cancelled"
     },
     {
       "id": 5,
       "name": "Michael Brown",
       "date": "2023-11-20",
       "time": "11:30",
-      "status": "cancel",
-      "reply": "Your booking is cancelled",
+      "status": "postponed",
+      "reply": "sdfsdgf",
       "additionalField": "Additional Value",
       "newKey": "newValue",
       "isPremium": true

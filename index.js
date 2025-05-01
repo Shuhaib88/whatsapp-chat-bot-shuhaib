@@ -9,9 +9,36 @@ const WHATSAPP_TOKEN =
 "EAAJuhpRf7lEBO04Ia04zlH92Wikv3YpEOzg9I6BdZCtfL7y4DF1hyKXNzrZCsQNxrXun6PobruAFRxUweQNaL5ZAbDRWuiKf5agiCnubCzYPilFAZAMSweK2lx14qAsV90QxwN3skUQlWYMGZCYLzuaXHL6fpZB3dKmSKVPedZCFoTXw2lBGPZBbwe2mYqFeVVX0ZCe9touMZBK2o1wWKTOZAZBxJhw2SKAO64mlDq4ZD";
 const TOKEN = "abhijith123";
 const userState = new Map();
+const app = express();
+
+app.use(express.json());
+const dbPath = "dashboard/json/database.json";
+
+app.get('/api/bookings', (req, res) => {
+    const status = req.query.status;
+    const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+    const bookings = status ? data.bookings.filter(b => b.status === status) : data.bookings;
+    res.json(bookings);
+});
+
+app.put('/api/bookings/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const { status, reply } = req.body;
+
+    const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+    const index = data.bookings.findIndex(b => b.id === id);
+
+    if (index === -1) return res.status(404).send('Booking not found');
+
+    data.bookings[index].status = status;
+    data.bookings[index].reply = reply;
+
+    fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
+    res.send('Updated');
+});
 
 
-const databasePath = path.join(__dirname, 'database.json');
+const databasePath = path.join(__dirname, 'dashboard/json/database.json');
 
 const writeUserStateMap = (userMap) => {
   try {
@@ -26,12 +53,8 @@ const writeUserStateMap = (userMap) => {
   }
 };
 
-
-
-
 // server starting point
 
-const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

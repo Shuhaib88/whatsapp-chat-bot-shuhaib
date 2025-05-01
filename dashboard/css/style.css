@@ -42,7 +42,7 @@ body {
 }
 
 .nav-links li:hover {
-    background-color: #c45522;
+    background-color: #34495e;
 }
 
 .nav-links li {
@@ -52,11 +52,7 @@ body {
 
 .nav-links li.active {
     background-color: #3498db;
-    color: white;
-}
 
-.nav-links li:hover:not(.active) {
-    background-color: #f0f0f0;
 }
 
 .nav-links li i {

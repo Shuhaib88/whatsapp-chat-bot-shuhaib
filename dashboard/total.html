@@ -17,17 +17,23 @@
                 <h2><i class="fas fa-hotel"></i> Booking System</h2>
             </div>
             <ul class="nav-links">
+                <li onclick="window.location.href='admin.html'; setActive(this)">
+                    <i class="fas fa-user-cog"></i> Admin Panel
+                </li>
                 <li onclick="window.location.href='dashboard.html'; setActive(this)">
                     <i class="fas fa-tachometer-alt"></i> Dashboard
                 </li>
-                <li onclick="window.location.href='admin.html'; setActive(this)">
-                    <i class="fas fa-user-cog"></i> Admin Panel
+                <li onclick="window.location.href='confirmed.html'; setActive(this)">
+                    <i class="fas fa-check-circle"></i> Confirmed Bookings
                 </li>
                 <li onclick="window.location.href='pending.html'; setActive(this)">
                     <i class="fas fa-clock"></i> Pending Bookings
                 </li>
-                <li onclick="window.location.href='confirmed.html'; setActive(this)">
-                    <i class="fas fa-check-circle"></i> Confirmed Bookings
+                <li onclick="window.location.href='postponded.html'; setActive(this)">
+                    <i class="fas fa-clock"></i> Postponded
+                </li>
+                <li onclick="window.location.href='cancelled.html'; setActive(this)">
+                    <i class="fas fa-check-circle"></i> Cancelled Bookings
                 </li>
                 <li onclick="window.location.href='total.html'; setActive(this)">
                     <i class="fas fa-list-alt"></i> Total Bookings

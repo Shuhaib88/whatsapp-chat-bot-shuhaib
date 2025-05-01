@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     item.textContent.includes("Pending")) ||
                 (currentPage === "confirmed.html" &&
                     item.textContent.includes("Confirmed")) ||
+                (currentPage === "postponded.html" &&
+                    item.textContent.includes("Postponed")) ||
+                (currentPage === "cancelled.html" &&
+                    item.textContent.includes("Cancelled")) ||
                 (currentPage === "total.html" && item.textContent.includes("Total"))
             ) {
                 item.classList.add("active");
@@ -52,7 +56,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 const tbody = document.querySelector('tbody');
                 tbody.innerHTML = ''; // Clear existing rows
 
-                data.bookings.forEach(booking => {
+                // Detect current status based on URL
+                const currentPage = window.location.pathname.split("/").pop();
+                let filteredBookings = data.bookings;
+
+                if (currentPage === "pending.html") {
+                    filteredBookings = data.bookings.filter(b => b.status === "pending");
+                } else if (currentPage === "confirmed.html") {
+                    filteredBookings = data.bookings.filter(b => b.status === "confirmed");
+                } else if (currentPage === "postponded.html") {
+                    filteredBookings = data.bookings.filter(b => b.status === "postponed");
+                } else if (currentPage === "cancelled.html") {
+                    filteredBookings = data.bookings.filter(b => b.status === "cancel");
+                }
+                // Else, show all for dashboard or total.html
+
+                filteredBookings.forEach(booking => {
                     const row = document.createElement('tr');
                     
                     // Create table cells
@@ -73,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <textarea class="reply-textarea" placeholder="Type your reply...">${booking.reply || ''}</textarea>
                         </td>
                         <td>
-                            <button class="update-btn" data-id="${booking.id}">Update</button>
+                            <button class="update-btn" data-id="${booking.id}" onclick="updateBooking(${booking.id})">Update</button>
                         </td>
                     `;
                     tbody.appendChild(row);
@@ -93,7 +112,22 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => console.error('Error loading bookings:', error));
     }
-
+    
+    function updateBooking(id, status, reply) {
+        fetch(`/api/bookings/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: status, reply: reply })
+        })
+        .then(res => {
+            if (res.ok) {
+                alert('Booking confirmed');
+                location.reload();
+            } else {
+                alert('Failed to update');
+            }
+        });
+    }
     // Initial load
     loadBookings();
 });
