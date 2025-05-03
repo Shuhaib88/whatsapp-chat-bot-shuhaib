@@ -1,10 +1,15 @@
+
 {
-  "919074496405": {
-    "state": "booking completed",
-    "name": "Abhi",
-    "date": "02/05/2025",
-    "time": "12 - 1 pm",
-    "TimeLog": "01 May 2025, 12:34:43 pm",
-    "status": "Pending"
-  }
+  "bookings": [
+    {
+      "id": 1,
+      "phone_no":"919074496405",
+      "stage": "confirm",
+      "name": "Abhi",
+      "date": "02/05/2025",
+      "time": "12 - 1 pm",
+      "time_log": "01 May 2025, 12:34:43 pm",
+      "status": "confirm"
+    }
+  ]
 }

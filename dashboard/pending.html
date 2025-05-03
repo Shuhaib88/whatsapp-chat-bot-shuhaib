@@ -9,10 +9,16 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         />
+
+        <!-- Add jQuery and jQuery UI for datepicker -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     </head>
     <body>
         <!-- Vertical Navbar -->
-        <nav class="navbar">
+        <nav class="navbar1">
             <div class="navbar-header">
                 <h2><i class="fas fa-hotel"></i> Booking System</h2>
             </div>
@@ -44,7 +50,7 @@
         <!-- Main Content -->
         <div class="main-content">
             <div class="dashboard-header">
-                <h1><i class="fas fa-clock"></i> Pending Bookings</h1>
+                <h1><i class="textPending fas fa-clock"></i> Pending Bookings</h1>
             </div>
 
             <!-- Pending Bookings Table -->
@@ -54,6 +60,7 @@
                         <tr>
                             <th>SL No</th>
                             <th>Name</th>
+                            <th>Phone No</th>
                             <th>Date</th>
                             <th>Time</th>
                             <th>Status</th>
@@ -68,7 +75,65 @@
             </div>
         </div>
 
+        <!-- filtering Navbar -->
+        <nav class="navbar2 right-navbar">
+            <div class="navbar-header">
+                <h2><i class="fas fa-hotel"></i> Filter Data </h2>
+            </div>
+            
+            <div class="navbar-filters">
+
+                <!-- Text Filter -->
+                <div class="filter-box">
+                    <label for="text-filter"><i class="fas fa-search"></i> Search</label>
+                    <input type="text" id="text-filter" class="form-control" placeholder="Search bookings...">
+                </div>
+
+                <!-- Date Filter -->
+                <div class="filter-box">
+                    <label for="date-filter"><i class="far fa-calendar-alt"></i> Date</label>
+                    <input type="date" id="date-filter" class="form-control">
+                </div>
+                                
+                <!-- Time Interval Filter -->
+                <div class="filter-box">
+                    <label for="time-filter"><i class="far fa-clock"></i> Time Slot</label>
+                    <select id="time-filter" class="form-control">
+                        <option value="">All Times</option>
+                        <option value="8-9">8:00 AM - 9:00 AM</option>
+                        <option value="9-10">9:00 AM - 10:00 AM</option>
+                        <option value="10-11">10:00 AM - 11:00 AM</option>
+                        <option value="11-12">11:00 AM - 12:00 PM</option>
+                        <option value="12-13">12:00 PM - 1:00 PM</option>
+                        <option value="13-14">1:00 PM - 2:00 PM</option>
+                        <option value="14-15">2:00 PM - 3:00 PM</option>
+                        <option value="15-16">3:00 PM - 4:00 PM</option>
+                        <option value="16-17">4:00 PM - 5:00 PM</option>
+                    </select>
+                </div>
+                
+                <!-- Status Filter -->
+                <div class="filter-box">
+                    <label for="status-filter"><i class="fas fa-tags"></i> Status</label>
+                    <select id="status-filter" class="form-control">
+                        <option value="">All Statuses</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Confirmed">Confirmed</option>
+                        <option value="Postponed">Postponed</option>
+                        <option value="Cancel">Cancel</option>
+                        <option value="Complete">Complete</option>
+                        <option value="Not Arrived">Not Arrived</option>
+                    </select>
+                </div>
+                
+                <!-- Apply/Clear Buttons -->
+                <div class="filter-actions">
+                    <button class="btn btn-primary apply-filters">Search</button>
+                    <button class="btn btn-default clear-filters">Clear</button>
+                </div>
+            </div>
+        </nav>
+
         <script src="js/common.js"></script>
-        <script src="js/pending.js"></script>
     </body>
 </html>

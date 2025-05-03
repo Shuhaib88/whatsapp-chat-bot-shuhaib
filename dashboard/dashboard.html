@@ -82,6 +82,39 @@
             </div>
         </div>
 
+        <!-- Doctor cunsultation status update box-->
+        <div class="consultation-status-section">
+            <h2>Doctor Consultation Status Update</h2>
+            <form id="statusForm">
+              <div class="status-options">
+                <label>
+                  <input type="radio" name="status" value="on_leave">
+                  Doctor is on leave
+                </label><br>
+                
+                <label>
+                  <input type="radio" name="status" value="cancelled">
+                  Consultation cancelled due to emergency
+                </label><br>
+                
+                <label>
+                  <input type="radio" name="status" value="slot_full">
+                  Today's slot is full
+                </label><br>
+              </div>
+              
+              <div class="additional-info" style="margin-top: 15px;">
+                <label for="details">Additional Information (optional):</label><br>
+                <textarea class="additional-info-textarea" id="details" name="details" rows="3" cols="40" placeholder="Enter any additional details here..."></textarea>
+              </div>
+              
+              <div class="form-actions" style="margin-top: 15px;">
+                <button type="submit">Update Status</button>
+                <button type="reset">Clear</button>
+              </div>
+            </form>
+          </div>
+
         <script src="js/script.js"></script>
     </body>
 </html>

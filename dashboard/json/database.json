@@ -3,17 +3,46 @@
     {
       "id": 1,
       "name": "John Doe",
+      "phone_no":"919074496405",
       "date": "2023-11-15",
-      "time": "14:30",
-      "status": "pending",
+      "time": "8-9 am",
+      "status": "Pending",
+      "reply": "Confirmed by shuhaib"
+    },
+    {
+      "id": 6,
+      "name": "shuhaib",
+      "phone_no":"919074496405",
+      "date": "2023-11-16",
+      "time": "9-10 am",
+      "status": "Pending",
+      "reply": "Confirmed by shuhaib"
+    },
+    {
+      "id": 7,
+      "name": "John Doe3",
+      "phone_no":"919074496405",
+      "date": "2023-11-17",
+      "time": "8-9 am",
+      "status": "Pending",
+      "reply": "Confirmed by shuhaib"
+    },
+    {
+      "id": 7,
+      "name": "John Doe3",
+      "phone_no":"919074496405",
+      "date": "2023-11-17",
+      "time": "8-9 am",
+      "status": "Confirmed",
       "reply": "Confirmed by shuhaib"
     },
     {
       "id": 2,
       "name": "Jane Smith",
+      "phone_no":"919074496405",
       "date": "2023-11-16",
       "time": "10:00",
-      "status": "confirmed",
+      "status": "Confirmed",
       "reply": "Confirmed by admin"
     },
     {
@@ -21,7 +50,7 @@
       "name": "Robert Johnson",
       "date": "2023-11-17",
       "time": "16:45",
-      "status": "postponed",
+      "status": "Postponed",
       "reply": "Rescheduled for next week"
     },
     {
@@ -29,7 +58,7 @@
       "name": "Emily Davis",
       "date": "2023-11-18",
       "time": "09:15",
-      "status": "cancel",
+      "status": "Cancel",
       "reply": "cancelled"
     },
     {
@@ -37,7 +66,7 @@
       "name": "Michael Brown",
       "date": "2023-11-20",
       "time": "11:30",
-      "status": "postponed",
+      "status": "Postponed",
       "reply": "sdfsdgf",
       "additionalField": "Additional Value",
       "newKey": "newValue",
