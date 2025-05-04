@@ -3,25 +3,25 @@
     {
       "id": 1,
       "name": "John Doe",
-      "phone_no":"919074496405",
+      "phone_no": "919074496405",
       "date": "2023-11-15",
       "time": "8-9 am",
-      "status": "Pending",
+      "status": "Confirmed",
       "reply": "Confirmed by shuhaib"
     },
     {
       "id": 6,
       "name": "shuhaib",
-      "phone_no":"919074496405",
+      "phone_no": "919074496405",
       "date": "2023-11-16",
       "time": "9-10 am",
-      "status": "Pending",
+      "status": "Postponed",
       "reply": "Confirmed by shuhaib"
     },
     {
       "id": 7,
       "name": "John Doe3",
-      "phone_no":"919074496405",
+      "phone_no": "919074496405",
       "date": "2023-11-17",
       "time": "8-9 am",
       "status": "Pending",
@@ -30,7 +30,7 @@
     {
       "id": 7,
       "name": "John Doe3",
-      "phone_no":"919074496405",
+      "phone_no": "919074496405",
       "date": "2023-11-17",
       "time": "8-9 am",
       "status": "Confirmed",
@@ -39,10 +39,10 @@
     {
       "id": 2,
       "name": "Jane Smith",
-      "phone_no":"919074496405",
+      "phone_no": "919074496405",
       "date": "2023-11-16",
       "time": "10:00",
-      "status": "Confirmed",
+      "status": "Pending",
       "reply": "Confirmed by admin"
     },
     {

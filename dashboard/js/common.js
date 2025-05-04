@@ -178,18 +178,21 @@ document.addEventListener('DOMContentLoaded', function() {
         // In a real app, this would be a fetch call to your API
         console.log(`Updating booking ${id} to status ${status} with reply: ${reply}`);
         
-        // For demo purposes, we'll just update the local data and refresh
-        const booking = allBookings.find(b => b.id == id);
-        if (booking) {
-            booking.status = status;
-            booking.reply = reply;
-        }
-        
+        fetch(`/api/bookings/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: status, reply: reply })
+        })
+        .then(res => {
+            if (res.ok) {
+                alert('Booking updated successfully');
+                location.reload();
+            } else {
+                alert('Failed to update');
+            }
+        });
         // Reapply filters to refresh the view
         applyFilters();
-        
-        // In a real app, you might want to show a success message
-        alert('Booking updated successfully!');
     }
 
     // Add event listeners for filter controls
