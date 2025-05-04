@@ -23,7 +23,7 @@ app.get('/api/bookings', (req, res) => {
 
 app.put('/api/bookings/:id', (req, res) => {
     const id = parseInt(req.params.id);
-    const { status, reply } = req.body;
+    const { status, reply, stage } = req.body;
 
     const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
     const index = data.bookings.findIndex(b => b.id === id);
@@ -32,6 +32,7 @@ app.put('/api/bookings/:id', (req, res) => {
 
     data.bookings[index].status = status;
     data.bookings[index].reply = reply;
+    data.bookings[index].stage = stage;
 
     fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
     res.send('Updated');

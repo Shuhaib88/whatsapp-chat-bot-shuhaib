@@ -7,34 +7,8 @@
       "date": "2023-11-15",
       "time": "8-9 am",
       "status": "Confirmed",
-      "reply": "Confirmed by shuhaib"
-    },
-    {
-      "id": 6,
-      "name": "shuhaib",
-      "phone_no": "919074496405",
-      "date": "2023-11-16",
-      "time": "9-10 am",
-      "status": "Postponed",
-      "reply": "Confirmed by shuhaib"
-    },
-    {
-      "id": 7,
-      "name": "John Doe3",
-      "phone_no": "919074496405",
-      "date": "2023-11-17",
-      "time": "8-9 am",
-      "status": "Pending",
-      "reply": "Confirmed by shuhaib"
-    },
-    {
-      "id": 7,
-      "name": "John Doe3",
-      "phone_no": "919074496405",
-      "date": "2023-11-17",
-      "time": "8-9 am",
-      "status": "Confirmed",
-      "reply": "Confirmed by shuhaib"
+      "stage": "Confirmed",
+      "reply": "Pending123"
     },
     {
       "id": 2,
@@ -42,7 +16,8 @@
       "phone_no": "919074496405",
       "date": "2023-11-16",
       "time": "10:00",
-      "status": "Pending",
+      "status": "Confirmed",
+      "stage": "",
       "reply": "Confirmed by admin"
     },
     {
@@ -51,6 +26,7 @@
       "date": "2023-11-17",
       "time": "16:45",
       "status": "Postponed",
+      "stage": "",
       "reply": "Rescheduled for next week"
     },
     {
@@ -59,6 +35,7 @@
       "date": "2023-11-18",
       "time": "09:15",
       "status": "Cancel",
+      "stage": "",
       "reply": "cancelled"
     },
     {
@@ -67,10 +44,38 @@
       "date": "2023-11-20",
       "time": "11:30",
       "status": "Postponed",
-      "reply": "sdfsdgf",
-      "additionalField": "Additional Value",
-      "newKey": "newValue",
-      "isPremium": true
+      "stage": "",
+      "reply": "sdfsdgf"
+    },
+    {
+      "id": 6,
+      "name": "shuhaib",
+      "phone_no": "919074496405",
+      "date": "2023-11-16",
+      "time": "9-10 am",
+      "status": "Postponed",
+      "stage": "",
+      "reply": "Confirmed by shuhaib"
+    },
+    {
+      "id": 7,
+      "name": "John Doe3",
+      "phone_no": "919074496405",
+      "date": "2023-11-17",
+      "time": "8-9 am",
+      "status": "Pending",
+      "stage": "",
+      "reply": "Confirmed by shuhaib"
+    },
+    {
+      "id": 8,
+      "name": "John Doe3",
+      "phone_no": "919074496405",
+      "date": "2023-11-17",
+      "time": "8-9 am",
+      "status": "Confirmed",
+      "stage": "",
+      "reply": "Confirmed by shuhaib"
     }
   ]
 }

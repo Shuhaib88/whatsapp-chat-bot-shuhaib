@@ -176,12 +176,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function updateBooking(id, status, reply) {
         // In a real app, this would be a fetch call to your API
-        console.log(`Updating booking ${id} to status ${status} with reply: ${reply}`);
+        console.log(`Updating booking ${id} to status ${status} with reply: ${reply} , stage :${status}`);
         
         fetch(`/api/bookings/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ status: status, reply: reply })
+            body: JSON.stringify({ status: status, reply: reply, stage: status }) // <-- Corrected here
         })
         .then(res => {
             if (res.ok) {
